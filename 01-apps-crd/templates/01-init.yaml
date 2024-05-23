@@ -22,3 +22,7 @@ spec:
     path: 02-apps-cm/01-init
     plugin:
       name: avp-hv-helm
+    helm:
+      parameters:
+        - name: global.component_name
+          value: {{ .Values.global.component_name }}
