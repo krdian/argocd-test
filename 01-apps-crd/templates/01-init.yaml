@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .Values.global.component_name }}-apps-init
+  name: test-apps-init
   namespace: argocd #! - constans parameter
   finalizers:
   - resources-finalizer.argocd.argoproj.io
