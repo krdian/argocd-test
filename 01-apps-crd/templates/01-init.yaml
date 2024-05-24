@@ -6,7 +6,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: {{ .Values.global.component_name }} #! - # that parameter is deliver form terraform appofapps
+  project: {{ .Values.global.compnent_name }} #! - # that parameter is deliver form terraform appofapps
   syncPolicy:
     automated:
       prune: false
