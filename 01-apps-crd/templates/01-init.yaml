@@ -14,7 +14,7 @@ spec:
     syncOptions:
         - CreateNamespace=true
   destination:
-    namespace: default
+    namespace: test
     server: {{ .Values.global.destination_server }} # that parameter is deliver form terraform appofapps
   source:
     repoURL: {{ .Values.global.appofapps_repourl }} # that parameter is deliver form terraform appofapps
