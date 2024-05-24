@@ -6,7 +6,7 @@ metadata:
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
-  project: {{ .Values.component_name }} #! - # that parameter is deliver form terraform appofapps
+  project: {{ .Values.globa.component_name }} #! - # that parameter is deliver form terraform appofapps
   syncPolicy:
     automated:
       prune: false
@@ -22,7 +22,3 @@ spec:
     path: 02-apps-cm/01-init
     plugin:
       name: avp-hv-helm
-    helm:
-      parameters:
-        - name: global.component_name
-          value: {{ .Values.global.component_name }}
