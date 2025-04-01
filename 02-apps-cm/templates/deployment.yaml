@@ -16,7 +16,13 @@ spec:
             app: hello-world
         spec:
         containers:
-            - name: hello-world
-            image: nginx:latest
+        - name: hello-world
+            image: docker.io/bitnami/hello-world:latest
             ports:
-                - containerPort: 80
+            - containerPort: 8080
+            env:
+            - name: HELLO_WORLD
+                valueFrom:
+                configMapKeyRef:
+                    name: myconfigmap
+                    key: my-key
