@@ -7,3 +7,4 @@ metadata:
     app: myapplication2
 data:
   my-key: {{.Values.myKey | quote }}
+  service_enable: {{ .Values.service.enable | quote }}
