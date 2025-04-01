@@ -6,4 +6,4 @@ metadata:
   labels:
     app: myapplication2
 data:
-  my-key: my-value
+  my-key: {{.Values.myKey | quote }}
